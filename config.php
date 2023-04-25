@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => 'https://laraxot.github.io/doc_comment/',
     'production' => false,
-    'siteName' => 'Docs Starter Template',
+    'siteName' => 'Module Comment',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
 
     // Algolia DocSearch credentials
