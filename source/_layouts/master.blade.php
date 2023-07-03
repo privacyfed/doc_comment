@@ -24,7 +24,7 @@
     <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
     <link rel="home" href="{{ $page->baseUrl }}">
-    <link rel="icon" href="{{ url('/favicon.ico') }}">
+    <link rel="icon" href="/favicon.ico">
 
     @stack('meta')
 
@@ -34,7 +34,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ url(mix('css/main.css', 'assets/build')) }}">
+    <link rel="stylesheet" href="{{ url('assets/build/css/main.css') }}">
+
+
 
     @if ($page->docsearchApiKey && $page->docsearchIndexName)
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
@@ -46,7 +48,8 @@
         <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
             <div class="flex items-center">
                 <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                    <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
+                    <img class="h-8 md:h-10 mr-3" src="{{ url('/assets/img/logo.svg') }}"
+                        alt="{{ $page->siteName }} logo" />
 
                     <h1 class="text-lg md:text-2xl text-blue-900 font-semibold hover:text-blue-600 my-0 pr-4">
                         {{ $page->siteName }}</h1>
@@ -67,7 +70,7 @@
         @yield('body')
     </main>
 
-    <script src="{{ url(mix('js/main.js', 'assets/build')) }}"></script>
+    <script src="{{ url('assets/build/js/main.js') }}"></script>
 
     @stack('scripts')
 
